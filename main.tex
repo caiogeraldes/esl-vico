@@ -1,5 +1,7 @@
+% Tradução de Le vieux slave de Claire Le Feuvre
 \documentclass[11pt,a4paper]{memoir}
 
+% BEGIN: DETALHES DE DIAGRAMAÇÃO
 % set \clubpenalty, etc. to distinctive values for use
 % in tracing page breaks. These values are chosen so that
 % no single penalty will absolutely prohibit a page break, but
@@ -30,12 +32,6 @@
 \newcommand\chap[1]{%
 	\chapter*[#1]{#1}%
 	\addcontentsline{toc}{chapter}{#1}}
-
-\title{Eslavo Antigo}
-\author{Claire Le Feuvre}
-
-\usepackage{pietex}
-
 \usepackage{fontspec}
 \usepackage{microtype}
 \usepackage[main=brazil]{babel}
@@ -43,22 +39,18 @@
 \babelprovide[import, onchar=ids fonts]{ancientgreek}
 \babelfont[ancientgreek]{rm}{Brill}
 \babeltags{grc = ancientgreek}
-
 \babelprovide[import]{russian}
 \babelfont[russian]{rm}{Shafarik}
 \babeltags{rus = russian}
-
 \babelprovide{ocs}
 \babelfont[ocs]{rm}{Shafarik}
 \babeltags{ocs=ocs}
-
-\RequirePackage{graphicx}
+\usepackage{graphicx}
 % Configurações para o Hyperref
 % Paleta de cores
-\RequirePackage{xcolor}
+\usepackage{xcolor}
 \definecolor{green}{RGB}{16, 87, 87} % rgb(16,87,87)
-
-\RequirePackage[pdfusetitle]{hyperref}
+\usepackage[pdfusetitle]{hyperref}
 \hypersetup{%
 	colorlinks=true, % false: boxed links; true: colored links
 	linkcolor=green,  % color of internal links
@@ -78,22 +70,32 @@
 \renewcommand{\appendixname}{Apêndice}
 \renewcommand{\appendixautorefname}{Apêndice}
 \newcommand{\aref}[1]{\hyperref[#1]{Apêndice~\ref{#1}}}
-
 \usepackage{paralist}
-
 \let\printindex\undefined
 \usepackage{../bibliografia/bibliocaiera}
-
 \usepackage{hyphenat}
+\usepackage{lipsum}
+% END: DETALHES DE DIAGRAMAÇÃO
 
-\newcommand{\grafema}[1]{$\langle$#1$\rangle$}
-\newcommand{\soft}{ь}
+\title{Eslavo Antigo}
+\author{Claire Le Feuvre}
+
+% Modelos de transliteração, ver ./pie.lua para as regras
+% Os comandos principais são \ocstrans (para notação transliterada do OCS),
+% \pietrans{} (para PIE) e \ciriltrans{} (para cirílico)
+\usepackage{pietex}
+% Os macros \cirilex e \ocsex definidos abaixo colocam o texto na fonte
+% apropriada e itálico quando necessário.
 \newcommand{\cirilex}[1]{{\rus{}\ciriltrans{#1}}}
 \newcommand{\ocsex}[1]{\emph{\ocstrans{#1}}}
-
+% Inclui uma entrada arbitrária entre < >.
+\newcommand{\grafema}[1]{$\langle$#1$\rangle$}
+% Inclui uma passagem definida em ./passagens.bib, as chaves vem logo após o
+% colchete no arquivo citado. Isso produz o título da obra abreviado e o número
+% da citação (e.g. Hdt. 1.1). Se houve autoria, cria completo: Hom. Il. 1.2.
+% Siga os modelos para criar novas entradas.
 \renewcommand{\passagem}[1]{\glslink{idx.#1}{\ifglshasparent{\glsentryparent{idx.#1}}{\glsxtrusefield{\glsentryparent{\glsentryparent{idx.#1}}}{useri}, }{}\glsxtrusefield{\glsentryparent{idx.#1}}{useri}, \gls{idx.#1}}}
 
-\usepackage{lipsum}
 
 \begin{document}
 
@@ -125,9 +127,27 @@
 \input{chaps/06_léxico.tex}
 
 
-\nocite{BirnbaumSchaeken1997,BirnbaumSchaeken1999,ComrieCorbett1993,Feuillet1999,Koch1990,Leskien1990,Lunt2001,Vaillant1964,Vaillant1970,Vecerka2003}
+\nocite{BirnbaumSchaeken1997,BirnbaumSchaeken1999,ComrieCorbett1993,Feuillet1999,Koch1990,Leskien1990,Lunt2001,Vaillant1964,Vaillant1970,Vecerka2003,CejtlinVecerkaBlagova1994,Derksen2008,Havlova1989,Kurz1997,Meillet1961,SadnikAitzetmuller1955,Trautmann1923,Stang1973,Vaillant1968}
 
-\printbibliography%
+
+\renewcommand*{\mkbibnamefamily}[1]{\textsc{#1}}
+\chapter*{Bibliografia seletiva}\addcontentsline{toc}{chapter}{Bibliografia
+seletiva}
+
+
+\printbibliography[
+	title={Gramáticas, gramáticas históricas, descrição da língua},
+	notkeyword={dicionario},
+	notkeyword={textos},
+	heading=subbibliography
+]
+\printbibliography[title={Dicionários, léxicos, etimologia},
+	keyword=dicionario,heading=subbibliography]
+\printbibliography[keyword={textos},
+	notkeyword={dicionario},heading=subbibliography,title={Coletâneas de textos e
+  traduções}]
+\renewcommand*{\mkbibnamefamily}[1]{#1}
+
 
 \cleardoublepage{}
 \chap{Índices}
