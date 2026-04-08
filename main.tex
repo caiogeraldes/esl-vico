@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper]{memoir}
+\documentclass[11pt,a4paper]{memoir}
 
 % set \clubpenalty, etc. to distinctive values for use
 % in tracing page breaks. These values are chosen so that
@@ -20,6 +20,16 @@
 % two lines, rather than before the first line.
 \displaywidowpenalty=1602
 
+\chapterstyle{hangnum}
+\setsecnumdepth{subsubsection}
+\setcounter{tocdepth}{3}
+\setlength{\footmarkwidth}{0.5em}
+\setlength{\footmarksep}{0em}
+\setlength{\footparindent}{0em}
+\footmarkstyle{\textsuperscript{#1}\hspace{0.5em}}
+\newcommand\chap[1]{%
+	\chapter*[#1]{#1}%
+	\addcontentsline{toc}{chapter}{#1}}
 
 \title{Eslavo Antigo}
 \author{Claire Le Feuvre}
@@ -78,6 +88,12 @@
 
 \newcommand{\grafema}[1]{$\langle$#1$\rangle$}
 \newcommand{\soft}{ь}
+\newcommand{\cirilex}[1]{{\rus{}\ciriltrans{#1}}}
+\newcommand{\ocsex}[1]{\emph{\ocstrans{#1}}}
+
+\renewcommand{\passagem}[1]{\glslink{idx.#1}{\ifglshasparent{\glsentryparent{idx.#1}}{\glsxtrusefield{\glsentryparent{\glsentryparent{idx.#1}}}{useri}, }{}\glsxtrusefield{\glsentryparent{idx.#1}}{useri}, \gls{idx.#1}}}
+
+\usepackage{lipsum}
 
 \begin{document}
 
@@ -110,5 +126,14 @@
 
 
 \printbibliography%
+
+\cleardoublepage{}
+\chap{Índices}
+\printunsrtglossary[
+	type=passagens,
+	style=bookindex,
+	title={Obras e passagens citadas},
+]
+
 
 \end{document}
