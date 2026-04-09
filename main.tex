@@ -96,6 +96,7 @@
 % da citação (e.g. Hdt. 1.1). Se houve autoria, cria completo: Hom. Il. 1.2.
 % Siga os modelos para criar novas entradas.
 \renewcommand{\passagem}[1]{\glslink{idx.#1}{\ifglshasparent{\glsentryparent{idx.#1}}{\glsxtrusefield{\glsentryparent{\glsentryparent{idx.#1}}}{useri}, }{}\glsxtrusefield{\glsentryparent{idx.#1}}{useri}, \gls{idx.#1}}}
+\newcommand{\passageme}[1]{\glslink{idx.#1}{\glsxtrusefield{\glsentryparent{idx.#1}}{useri}, \gls{idx.#1}}}
 
 
 \begin{document}
