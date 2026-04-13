@@ -58,7 +58,7 @@
 	filecolor=green,  % color of file links
 	urlcolor=green,
 }
-\renewcommand{\figureautorefname}{Figura}
+\renewcommand{\figureautorefname}{Mapa}
 \renewcommand{\tableautorefname}{Tabela}
 \renewcommand{\sectionautorefname}{Seção}
 \renewcommand{\chapterautorefname}{Capítulo}
@@ -100,6 +100,9 @@
 % Siga os modelos para criar novas entradas.
 \renewcommand{\passagem}[1]{\glslink{idx.#1}{\ifglshasparent{\glsentryparent{idx.#1}}{\glsxtrusefield{\glsentryparent{\glsentryparent{idx.#1}}}{useri}, }{}\glsxtrusefield{\glsentryparent{idx.#1}}{useri}, \gls{idx.#1}}}
 \newcommand{\passageme}[1]{\glslink{idx.#1}{\glsxtrusefield{\glsentryparent{idx.#1}}{useri} \gls{idx.#1}}}
+
+
+\newcommand{\gloss}[1]{\textsc{#1}}
 
 
 \begin{document}

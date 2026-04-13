@@ -411,6 +411,7 @@ function ocs_translit(v)
 	s = string.gsub(s, "*s", "S")
 	s = string.gsub(s, "*z", "Z")
 	s = string.gsub(s, "*c", "C")
+	s = string.gsub(s, "'", "’")
 	tex.sprint(s)
 end
 
