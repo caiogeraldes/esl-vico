@@ -16,6 +16,8 @@
 	\directlua{ocs_translit("#1")}}
 \newcommand{\ciriltrans}[1]{%
 	\directlua{ciryl_translit("#1")}}
+\newcommand{\cirilocsex}[1]{%
+	\directlua{cirilocs("#1")}}
 
 \DeclareOption{prods}{\renewcommand{\opcuneif}[1]{\directlua{op_prods_transcription("#1")}}}
 \DeclareOption*{\PackageWarning{pietex}{Unknown ‘\CurrentOption’}}

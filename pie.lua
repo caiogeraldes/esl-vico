@@ -431,6 +431,9 @@ function ciryl_translit(v)
 	s = string.gsub(s, "jẽ", "ѩ")
 	s = string.gsub(s, "ks", "ѯ")
 	s = string.gsub(s, "ps", "ѱ")
+	s = string.gsub(s, "i2", "ꙇ")
+	s = string.gsub(s, "o2", "ѡ")
+	s = string.gsub(s, "u2", "ѵ")
 	s = string.gsub(s, "G", "ћ")
 	s = string.gsub(s, "a", "а")
 	s = string.gsub(s, "b", "б")
@@ -441,7 +444,6 @@ function ciryl_translit(v)
 	s = string.gsub(s, "Z", "ж")
 	s = string.gsub(s, "z", "з")
 	s = string.gsub(s, "i", "и")
-	s = string.gsub(s, "i", "ꙇ")
 	s = string.gsub(s, "k", "к")
 	s = string.gsub(s, "l", "л")
 	s = string.gsub(s, "m", "м")
@@ -463,7 +465,28 @@ function ciryl_translit(v)
 	s = string.gsub(s, "E", "ѣ")
 	s = string.gsub(s, "ẽ", "ѧ")
 	s = string.gsub(s, "õ", "ѫ")
-	s = string.gsub(s, "u", "ѵ")
-	s = string.gsub(s, "o", "ѡ")
+	s = string.gsub(s, "'", "ꙿ")
 	tex.sprint(s)
+end
+
+function cirilocs(v)
+	local s = tostring(v)
+	local t = {}
+	local sep = ","
+	for str in string.gmatch(s, "([^" .. sep .. "]+)") do
+		table.insert(t, str)
+	end
+	if t[2] ~= nil then
+		tex.sprint("{\\rus{}")
+		ciryl_translit(t[1])
+		tex.sprint("}\\slash{}\\emph{")
+		ocs_translit(t[2])
+		tex.sprint("}")
+	else
+		tex.sprint("{\\rus{}")
+		ciryl_translit(s)
+		tex.sprint("}\\slash{}\\emph{")
+		ocs_translit(s)
+		tex.sprint("}")
+	end
 end

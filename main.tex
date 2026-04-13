@@ -65,11 +65,11 @@
 \renewcommand{\subsectionautorefname}{Seção}
 \renewcommand{\subsubsectionautorefname}{Pipoca}
 \newcommand{\subsubsectionaname}{Seção}
-\renewcommand{\appendixpagename}{Apêndices}
-\renewcommand{\appendixtocname}{Apêndices}
-\renewcommand{\appendixname}{Apêndice}
-\renewcommand{\appendixautorefname}{Apêndice}
-\newcommand{\aref}[1]{\hyperref[#1]{Apêndice~\ref{#1}}}
+\renewcommand{\appendixpagename}{Anexos}
+\renewcommand{\appendixtocname}{Anexos}
+\renewcommand{\appendixname}{Anexo}
+\renewcommand{\appendixautorefname}{Anexo}
+\newcommand{\aref}[1]{\hyperref[#1]{Anexo~\ref{#1}}}
 \usepackage{paralist}
 \usepackage{multirow}
 \let\printindex\undefined
@@ -89,14 +89,17 @@
 % apropriada e itálico quando necessário.
 \newcommand{\cirilex}[1]{{\rus{}\ciriltrans{#1}}}
 \newcommand{\ocsex}[1]{\emph{\ocstrans{#1}}}
+\newcommand{\jeru}{\ocstrans{U}}
+\newcommand{\jeri}{\ocstrans{I}}
 % Inclui uma entrada arbitrária entre < >.
 \newcommand{\grafema}[1]{$\langle$#1$\rangle$}
+\newcommand{\cirigraf}[1]{\grafema{\cirilex{#1}}}
 % Inclui uma passagem definida em ./passagens.bib, as chaves vem logo após o
 % colchete no arquivo citado. Isso produz o título da obra abreviado e o número
 % da citação (e.g. Hdt. 1.1). Se houve autoria, cria completo: Hom. Il. 1.2.
 % Siga os modelos para criar novas entradas.
 \renewcommand{\passagem}[1]{\glslink{idx.#1}{\ifglshasparent{\glsentryparent{idx.#1}}{\glsxtrusefield{\glsentryparent{\glsentryparent{idx.#1}}}{useri}, }{}\glsxtrusefield{\glsentryparent{idx.#1}}{useri}, \gls{idx.#1}}}
-\newcommand{\passageme}[1]{\glslink{idx.#1}{\glsxtrusefield{\glsentryparent{idx.#1}}{useri}, \gls{idx.#1}}}
+\newcommand{\passageme}[1]{\glslink{idx.#1}{\glsxtrusefield{\glsentryparent{idx.#1}}{useri} \gls{idx.#1}}}
 
 
 \begin{document}
@@ -158,5 +161,12 @@ seletiva}
 	style=bookindex,
 	title={Obras e passagens citadas},
 ]
+
+\appendix
+\appendixpage{}
+
+\chapter{Lista lexical}
+\chapter{Texto: Evangelho de Marcos 1.35--45}\label{anexo:evangelho}
+
 
 \end{document}
