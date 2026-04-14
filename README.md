@@ -2,7 +2,8 @@
 
 ## Macros locais
 
-Para facilitar, criei alguns macros:
+Para facilitar, criei alguns macros, use `./chaps/03_fonologia.tex` de
+referência.
 
 ### \gloss
 
