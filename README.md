@@ -7,8 +7,8 @@
 - Git
 - Editor de texto (VSCode, (neo)vim, Emacs etc)
 - Distribuição de LaTeX com LuaLaTeX
-- Fontes: Gentium Plus, Brill, Shafarik
-- just
+- Fontes: [Gentium Plus](https://software.sil.org/gentium/download/), [Brill](https://brill.com/page/510271), [Shafarik](https://fonts.google.com/specimen/Shafarik)
+- [just](https://github.com/casey/just)
 
 ### Clonando repositório
 
