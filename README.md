@@ -1,5 +1,36 @@
 # Material GELIEA - 2026
 
+## Macros locais
+
+Para facilitar, criei alguns macros:
+
+### \gloss
+
+Denota glosa.
+
+### \pietrans
+
+Transliteração PIE com itálico.
+
+### \grafema e \cirigraf
+
+Denotam grafemas com as chaves angulares, `\cirilgraf` faz a conversão do
+cirílico para facilitar.
+
+### \cirilocsex
+
+Produz um exemplo do tipo `<CIRÍLICO>/<OCSTRANSLITERADO>`
+Se apenas um argumento for passado, a transliteração será idêntica.
+Se quiser transliterações distintas, separar por vírgula: `\cirilocsex{<CIRÍLICO>/<OCSTRANSLITERADO>}`
+
+### \cirilex, \ocsex
+
+Cirílico e OCS transliterados na fonte apropriada.
+
+### \ciritrans, \ocstrans
+
+Cirílico e OCS transliterados sem alteração da fonte.
+
 ## Como contribuir:
 
 ### Requisitos
