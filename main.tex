@@ -35,16 +35,40 @@
 \usepackage{fontspec}
 \usepackage{microtype}
 \usepackage[main=brazil]{babel}
-\setmainfont{Gentium Plus}
+\setmainfont{Gentium}[
+  Path=./assets/fonts/Gentium/,
+  Extension=.ttf,
+  UprightFont=*-Regular,
+  BoldFont=*-Bold,
+  ItalicFont=*-Italic,
+]
 \babelprovide[import, onchar=ids fonts]{ancientgreek}
-\babelfont[ancientgreek]{rm}{Brill}
+\babelfont[ancientgreek]{rm}[
+  Path=./assets/fonts/Brill/,
+  Extension=.ttf,
+  UprightFont=*-Roman,
+  BoldFont=*-Bold,
+  ItalicFont=*-Italic,
+]{Brill}
 \babeltags{grc = ancientgreek}
 \babelprovide[import]{russian}
-\babelfont[russian]{rm}{Shafarik}
-\babeltags{rus = russian}
+\babeltags{rus=russian}
+\babelfont[russian]{rm}[
+  Path=./assets/fonts/Shafarik/,
+  Extension=.ttf,
+  UprightFont=*-Regular,
+  BoldFont=*-Regular,
+  ItalicFont=*-Regular,
+]{Shafarik}
 \babelprovide{ocs}
-\babelfont[ocs]{rm}{Shafarik}
 \babeltags{ocs=ocs}
+\babelfont[ocs]{rm}[
+  Path=./assets/fonts/Shafarik/,
+  Extension=.ttf,
+  UprightFont=*-Regular,
+  BoldFont=*-Regular,
+  ItalicFont=*-Regular,
+]{Shafarik}
 \usepackage{graphicx}
 % Configurações para o Hyperref
 % Paleta de cores

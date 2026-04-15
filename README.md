@@ -39,13 +39,14 @@ Cirílico e OCS transliterados sem alteração da fonte.
 - Git
 - Editor de texto (VSCode, (neo)vim, Emacs etc)
 - Distribuição de LaTeX com LuaLaTeX
-- Fontes: [Gentium Plus](https://software.sil.org/gentium/download/), [Brill](https://brill.com/page/510271), [Shafarik](https://fonts.google.com/specimen/Shafarik)
 - [just](https://github.com/casey/just)
+
+**As fontes agora vem incluídas em ./assets/fonts/**
 
 ### Clonando repositório
 
 ```
-git clone https://github.com/caiogeraldes/esl-vico
+git clone https://github.com/caiogeraldes/esl-vico --recursive
 ```
 
 ### Editando documento
