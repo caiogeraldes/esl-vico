@@ -1,5 +1,5 @@
 % Tradução de Le vieux slave de Claire Le Feuvre
-\documentclass[11pt,a4paper]{memoir}
+\documentclass[11pt,a4paper,openright]{memoir}
 
 % BEGIN: DETALHES DE DIAGRAMAÇÃO
 % set \clubpenalty, etc. to distinctive values for use
@@ -140,10 +140,33 @@
 
 \begin{document}
 
-\frontmatter{}
+\frontmatter
+\pagestyle{empty}
 \maketitle
 
-\clearpage
+\cleartooddpage{}
+\SingleSpacing%
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures
+\cleartooddpage%
+
+\SingleSpacing%
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables
+
+\cleartooddpage%
+\SingleSpacing%
+\chap{Lista de abreviaturas e siglas}
+\glssetwidest[0]{Isoc.kkk}
+\glssetwidest[1]{Cononkkkk}
+\printunsrtglossary[
+	type=authwork,
+	title={Autores e obras antigas},
+	nonumberlist=true,
+	style=mcoltree
+]
+
+\cleartooddpage%
 \pagestyle{companion}
 \tableofcontents{}
 
