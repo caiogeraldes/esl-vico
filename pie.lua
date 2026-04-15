@@ -411,6 +411,7 @@ function ocs_translit(v)
 	s = string.gsub(s, "*s", "S")
 	s = string.gsub(s, "*z", "Z")
 	s = string.gsub(s, "*c", "C")
+	s = string.gsub(s, "*i", "I")
 	s = string.gsub(s, "'", "’")
 	tex.sprint(s)
 end
@@ -467,6 +468,7 @@ function ciryl_translit(v)
 	s = string.gsub(s, "ẽ", "ѧ")
 	s = string.gsub(s, "õ", "ѫ")
 	s = string.gsub(s, "'", "ꙿ")
+	s = string.gsub(s, "@", "҃")
 	tex.sprint(s)
 end
 
