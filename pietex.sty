@@ -7,7 +7,7 @@
 \newcommand{\luwiantrans}[1]{%
 	\directlua{luwian_transcription("#1")}}
 \newcommand{\pietrans}[1]{%
-\emph{\directlua{pie_transcription("#1")}}}
+	\emph{\directlua{pie_transcription("#1")}}}
 \newcommand{\opcuneif}[1]{%
 	\directlua{op_schmitt_transcription("#1")}}
 \newcommand{\optrans}[1]{%
@@ -18,6 +18,8 @@
 	\directlua{ciryl_translit("#1")}}
 \newcommand{\cirilocsex}[1]{%
 	\directlua{cirilocs("#1")}}
+\newcommand{\glagoltrans}[1]{%
+	\directlua{glagol_translit("#1")}}
 
 \DeclareOption{prods}{\renewcommand{\opcuneif}[1]{\directlua{op_prods_transcription("#1")}}}
 \DeclareOption*{\PackageWarning{pietex}{Unknown ‘\CurrentOption’}}
