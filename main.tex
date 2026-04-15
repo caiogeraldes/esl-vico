@@ -42,6 +42,13 @@
   BoldFont=*-Bold,
   ItalicFont=*-Italic,
 ]
+\setsansfont{NotoSans}[
+  Path=./assets/fonts/Noto_Sans/static/,
+  Extension=.ttf,
+  UprightFont=*-Regular,
+  BoldFont=*-Bold,
+  ItalicFont=*-Italic,
+]
 \babelprovide[import, onchar=ids fonts]{ancientgreek}
 \babelfont[ancientgreek]{rm}[
   Path=./assets/fonts/Brill/,
@@ -127,7 +134,8 @@
 \newcommand{\passageme}[1]{\glslink{idx.#1}{\glsxtrusefield{\glsentryparent{idx.#1}}{useri} \gls{idx.#1}}}
 
 
-\newcommand{\gloss}[1]{\textbf{\small #1}}
+\newcommand{\gloss}[1]{{\footnotesize\sffamily #1}}
+\newcommand{\emptyfon}{∅}
 
 
 \begin{document}
@@ -181,6 +189,11 @@
 			traduções}]
 \renewcommand*{\mkbibnamefamily}[1]{#1}
 
+\appendix
+\appendixpage{}
+
+\chapter{Lista lexical}
+\chapter{Texto: Evangelho de Marcos 1.35--45}\label{anexo:evangelho}
 
 \cleardoublepage{}
 \chap{Índices}
@@ -190,11 +203,6 @@
 	title={Obras e passagens citadas},
 ]
 
-\appendix
-\appendixpage{}
-
-\chapter{Lista lexical}
-\chapter{Texto: Evangelho de Marcos 1.35--45}\label{anexo:evangelho}
 
 
 \end{document}
