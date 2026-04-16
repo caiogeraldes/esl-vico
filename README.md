@@ -77,9 +77,43 @@ git push origin main
 
 Uma vez realizado este processo, siga as instruções de como realizar um [Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
-## Tabelas de transcrição
+## Ajudas de edição
 
-### Cirílico
+### Comandos básicos:
+
+Além dos comando mencionados acima, utilize estes para facilitar:
+
+- Itálico: `\emph{texto}`
+- Negrito: `\textbf{texto}`
+- Sublinhado: `\underline{texto}`
+- Seção/subseção/subsubseção/subsubsubseção `\section{titulo}; \subsection{título}; \subsubsection{título}; \paragraph{título}`
+- Tabelas: ver abaixo
+- Listas não numeradas:
+```
+\begin{compactitem}[--]
+\item Item 1
+\item Item 2
+\end{compactitem}
+```
+- 
+- Listas numeradas:
+```
+\begin{compactenum}
+\item Item 1
+\item Item 2
+\end{compactenum}
+```
+
+### Gerador de tabelas
+
+Use [isso aqui](https://www.tablesgenerator.com/) se quiser fazer tabelas mais ou menos bonitas e ajudar no trabalho.
+
+### Tabelas de transcrição
+
+Se quiser economizar tempo com os diacríticos e agilizar a diagramação, siga
+essas tabelas:
+
+#### Cirílico
 
 | ASCII | Cirílico  |
 | ----- | --------- |
@@ -136,7 +170,7 @@ Uma vez realizado este processo, siga as instruções de como realizar um [Pull 
 | ẽ     | ѧ         |
 
 
-### OCS Transliterado
+#### OCS Transliterado
 
 
 | ASCII | Unicode  |
@@ -158,8 +192,7 @@ Uma vez realizado este processo, siga as instruções de como realizar um [Pull 
 | õ     | ǫ        |
 | ẽ     | ę        |
 
-### PIE
-
+#### PIE
 
 | ASCII | Unicode  |
 | ----- | -------- |
