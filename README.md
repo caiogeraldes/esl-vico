@@ -95,7 +95,6 @@ Além dos comando mencionados acima, utilize estes para facilitar:
 \item Item 2
 \end{compactitem}
 ```
-- 
 - Listas numeradas:
 ```
 \begin{compactenum}
