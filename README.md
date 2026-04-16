@@ -76,3 +76,84 @@ git push origin main
 ```
 
 Uma vez realizado este processo, siga as instruções de como realizar um [Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
+
+## Tabelas de transcrição
+
+### Cirílico
+
+| ASCII | Cirílico  |
+| ----- | --------- |
+| '     | ꙿ         |
+| @     | *titulus* |
+| C     | ч         |
+| E     | ѣ         |
+| G     | ћ         |
+| I     | ь         |
+| S     | ш         |
+| St    | щ         |
+| U     | ъ         |
+| Z     | ж         |
+| a     | а         |
+| b     | б         |
+| c     | ц         |
+| d     | д         |
+| dz    | ѕ         |
+| dz'   | ꙁ         |
+| e     | є         |
+| f     | ф         |
+| g     | г         |
+| g'    | г҄         |
+| i     | и         |
+| i2    | ꙇ         |
+| ja    | ꙗ         |
+| je    | ѥ         |
+| ju    | ю         |
+| jõ    | ѭ         |
+| jẽ    | ѩ         |
+| k     | к         |
+| ks    | ѯ         |
+| l     | л         |
+| l'    | л҄         |
+| m     | м         |
+| n     | н         |
+| n'    | н҄         |
+| o     | о         |
+| o2    | ѡ         |
+| p     | п         |
+| ps    | ѱ         |
+| r     | р         |
+| r'    | р҄         |
+| s     | с         |
+| t     | т         |
+| th    | ѳ         |
+| u     | оу        |
+| u2    | ѵ         |
+| v     | в         |
+| x     | х         |
+| y     | ꙑ         |
+| z     | з         |
+| õ     | ѫ         |
+| ẽ     | ѧ         |
+
+
+# OCS Transliterado
+
+
+| ASCII | Unicode  |
+| ----- | -------- |
+| '     | ’        |
+| *C    | Č        |
+| \*S   | Š        |
+| \*Z   | Ž        |
+| \*c   | C        |
+| \*i   | I        |
+| \*s   | S        |
+| \*z   | Z        |
+| C     | č        |
+| E     | ě        |
+| I     | ь        |
+| S     | š        |
+| U     | ъ        |
+| Z     | ž        |
+| õ     | ǫ        |
+| ẽ     | ę        |
