@@ -1,34 +1,58 @@
 # Material GELIEA - 2026
 
+- [Material GELIEA - 2026](#material-geliea---2026)
+  - [Macros locais](#macros-locais)
+    - [\\gloss](#gloss)
+    - [\\pietrans](#pietrans)
+    - [\\grafema e \\cirigraf](#grafema-e-cirigraf)
+    - [\\cirilocsex](#cirilocsex)
+    - [\\cirilex, \\ocsex](#cirilex-ocsex)
+    - [\\ciritrans, \\ocstrans](#ciritrans-ocstrans)
+  - [Como contribuir:](#como-contribuir)
+    - [Requisitos](#requisitos)
+    - [Clonando repositório](#clonando-repositorio)
+    - [Editando documento](#editando-documento)
+    - [Compilando o documento](#compilando-o-documento)
+    - [Enviando mudanças](#enviando-mudancas)
+  - [Ajudas de edição](#ajudas-de-edicao)
+    - [Comandos básicos:](#comandos-basicos)
+    - [Gerador de tabelas](#gerador-de-tabelas)
+    - [Tabelas de transcrição](#tabelas-de-transcricao)
+      - [Cirílico](#cirilico)
+      - [OCS Transliterado](#ocs-transliterado)
+      - [PIE](#pie)
+    - [Adicionando passagens citadas](#adicionando-passagens-citadas)
+    - [Adicionando referência aos manuscritos](#adicionando-referencia-aos-manuscritos)
+
 ## Macros locais
 
 Para facilitar, criei alguns macros, use `./chaps/03_fonologia.tex` de
 referência.
 
-### \gloss
+### \\gloss
 
 Denota glosa.
 
-### \pietrans
+### \\pietrans
 
 Transliteração PIE com itálico.
 
-### \grafema e \cirigraf
+### \\grafema e \\cirigraf
 
 Denotam grafemas com as chaves angulares, `\cirilgraf` faz a conversão do
 cirílico para facilitar.
 
-### \cirilocsex
+### \\cirilocsex
 
 Produz um exemplo do tipo `<CIRÍLICO>/<OCSTRANSLITERADO>`
 Se apenas um argumento for passado, a transliteração será idêntica.
 Se quiser transliterações distintas, separar por vírgula: `\cirilocsex{<CIRÍLICO>/<OCSTRANSLITERADO>}`
 
-### \cirilex, \ocsex
+### \\cirilex, \\ocsex
 
 Cirílico e OCS transliterados na fonte apropriada.
 
-### \ciritrans, \ocstrans
+### \\ciritrans, \\ocstrans
 
 Cirílico e OCS transliterados sem alteração da fonte.
 
@@ -89,13 +113,16 @@ Além dos comando mencionados acima, utilize estes para facilitar:
 - Seção/subseção/subsubseção/subsubsubseção `\section{titulo}; \subsection{título}; \subsubsection{título}; \paragraph{título}`
 - Tabelas: ver abaixo
 - Listas não numeradas:
+
 ```
 \begin{compactitem}[--]
 \item Item 1
 \item Item 2
 \end{compactitem}
 ```
+
 - Listas numeradas:
+
 ```
 \begin{compactenum}
 \item Item 1
@@ -117,7 +144,7 @@ essas tabelas:
 | ASCII | Cirílico  |
 | ----- | --------- |
 | '     | ꙿ         |
-| @     | *titulus* |
+| @     | _titulus_ |
 | C     | ч         |
 | E     | ѣ         |
 | G     | ћ         |
@@ -135,7 +162,7 @@ essas tabelas:
 | e     | є         |
 | f     | ф         |
 | g     | г         |
-| g'    | г҄         |
+| g'    | г҄        |
 | i     | и         |
 | i2    | ꙇ         |
 | ja    | ꙗ         |
@@ -146,16 +173,16 @@ essas tabelas:
 | k     | к         |
 | ks    | ѯ         |
 | l     | л         |
-| l'    | л҄         |
+| l'    | л҄        |
 | m     | м         |
 | n     | н         |
-| n'    | н҄         |
+| n'    | н҄        |
 | o     | о         |
 | o2    | ѡ         |
 | p     | п         |
 | ps    | ѱ         |
 | r     | р         |
-| r'    | р҄         |
+| r'    | р҄        |
 | s     | с         |
 | t     | т         |
 | th    | ѳ         |
@@ -168,83 +195,81 @@ essas tabelas:
 | õ     | ѫ         |
 | ẽ     | ѧ         |
 
-
 #### OCS Transliterado
 
-
-| ASCII | Unicode  |
-| ----- | -------- |
-| '     | ’        |
-| *C    | Č        |
-| \*S   | Š        |
-| \*Z   | Ž        |
-| \*c   | C        |
-| \*i   | I        |
-| \*s   | S        |
-| \*z   | Z        |
-| C     | č        |
-| E     | ě        |
-| I     | ь        |
-| S     | š        |
-| U     | ъ        |
-| Z     | ž        |
-| õ     | ǫ        |
-| ẽ     | ę        |
+| ASCII | Unicode |
+| ----- | ------- |
+| '     | ’       |
+| \*C   | Č       |
+| \*S   | Š       |
+| \*Z   | Ž       |
+| \*c   | C       |
+| \*i   | I       |
+| \*s   | S       |
+| \*z   | Z       |
+| C     | č       |
+| E     | ě       |
+| I     | ь       |
+| S     | š       |
+| U     | ъ       |
+| Z     | ž       |
+| õ     | ǫ       |
+| ẽ     | ę       |
 
 #### PIE
 
-| ASCII | Unicode  |
-| ----- | -------- |
-| A     | ā        |
-| A/    | ā́        |
-| E     | ē        |
-| E/    | ḗ        |
-| I     | ī        |
-| I/    | ī́        |
-| L     | l̥        |
-| L/    | ĺ̥        |
-| LL    | l̥̄        |
-| LL/   | l̥̄́        |
-| M     | m̥        |
-| N     | n̥        |
-| O     | ō        |
-| O/    | ṓ        |
-| R     | r̥        |
-| R/    | ŕ̥        |
-| RR    | r̥̄        |
-| RR/   | r̥̄́        |
-| U     | ū        |
-| U/    | ū́        |
-| bh    | bʰ       |
-| c     | k̑        |
-| cw    | k̑ʷ       |
-| dh    | dʰ       |
-| gh    | gʰ       |
-| gw    | gʷ       |
-| gwh   | gʷʰ      |
-| h1    | h₁       |
-| h2    | h₂       |
-| h3    | h₃       |
-| j     | ĝ        |
-| jh    | ĝʰ       |
-| jw    | ĝʷ       |
-| k'    | ǵ        |
-| k'    | ḱ        |
-| kw    | kʷ       |
-| lR    | l̥        |
-| lR/   | ĺ̥        |
-| lRR   | l̥̄        |
-| lRR/  | l̥̄́        |
-| u̯'    | w        |
-| w     | u̯        |
-| y     | i̯        |
-| É     | ḗ        |
-| Ó     | ṓ        |
+| ASCII | Unicode |
+| ----- | ------- |
+| A     | ā       |
+| A/    | ā́       |
+| E     | ē       |
+| E/    | ḗ       |
+| I     | ī       |
+| I/    | ī́       |
+| L     | l̥       |
+| L/    | ĺ̥       |
+| LL    | l̥̄       |
+| LL/   | l̥̄́       |
+| M     | m̥       |
+| N     | n̥       |
+| O     | ō       |
+| O/    | ṓ       |
+| R     | r̥       |
+| R/    | ŕ̥       |
+| RR    | r̥̄       |
+| RR/   | r̥̄́       |
+| U     | ū       |
+| U/    | ū́       |
+| bh    | bʰ      |
+| c     | k̑       |
+| cw    | k̑ʷ      |
+| dh    | dʰ      |
+| gh    | gʰ      |
+| gw    | gʷ      |
+| gwh   | gʷʰ     |
+| h1    | h₁      |
+| h2    | h₂      |
+| h3    | h₃      |
+| j     | ĝ       |
+| jh    | ĝʰ      |
+| jw    | ĝʷ      |
+| k'    | ǵ       |
+| k'    | ḱ       |
+| kw    | kʷ      |
+| lR    | l̥       |
+| lR/   | ĺ̥       |
+| lRR   | l̥̄       |
+| lRR/  | l̥̄́       |
+| u̯'    | w       |
+| w     | u̯       |
+| y     | i̯       |
+| É     | ḗ       |
+| Ó     | ṓ       |
 
 ### Adicionando passagens citadas
 
 Modifique o arquivo `./passagens.bib`.
-Supondo que vá adicionar uma entrada *Mt 1.20*, adicione:
+Supondo que vá adicionar uma entrada _Mt 1.20_, adicione:
 
 ```
 @passage{Mt120,
@@ -260,7 +285,7 @@ No corpo do texto, adicione `\passageme{Mt120}`.
 ### Adicionando referência aos manuscritos
 
 Utilize `\glsxtrshort{<key>}` para a forma abreviada e `\glsxtrlong{<key>}` para a forma longa, o valor de `<key>` pode ser encontrado em `./authors.bib`.
-Caso necessite usar um nome diferente, e.g., *Missal* para o Missal de Kiev, 
-utilize `\glslink{<key>}{<texto formatado>}`, e.g., 
-`\glslink{Kiev}{\emph{Missal}}` produzirá o texto em itálico *Missal* e 
+Caso necessite usar um nome diferente, e.g., _Missal_ para o Missal de Kiev,
+utilize `\glslink{<key>}{<texto formatado>}`, e.g.,
+`\glslink{Kiev}{\emph{Missal}}` produzirá o texto em itálico _Missal_ e
 marcará a ocorrência da referência no índice remissivo.
