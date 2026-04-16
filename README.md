@@ -240,3 +240,27 @@ essas tabelas:
 | y     | i̯        |
 | É     | ḗ        |
 | Ó     | ṓ        |
+
+### Adicionando passagens citadas
+
+Modifique o arquivo `./passagens.bib`.
+Supondo que vá adicionar uma entrada *Mt 1.20*, adicione:
+
+```
+@passage{Mt120,
+  parent = {Mateus},
+  name = {1.20},
+}
+```
+
+Em caso de dúvidas sobre qual `parent` incluir, ver as opções em
+`./authors.bib`.
+No corpo do texto, adicione `\passageme{Mt120}`.
+
+### Adicionando referência aos manuscritos
+
+Utilize `\glsxtrshort{<key>}` para a forma abreviada e `\glsxtrlong{<key>}` para a forma longa, o valor de `<key>` pode ser encontrado em `./authors.bib`.
+Caso necessite usar um nome diferente, e.g., *Missal* para o Missal de Kiev, 
+utilize `\glslink{<key>}{<texto formatado>}`, e.g., 
+`\glslink{Kiev}{\emph{Missal}}` produzirá o texto em itálico *Missal* e 
+marcará a ocorrência da referência no índice remissivo.
