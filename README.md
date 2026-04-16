@@ -136,7 +136,7 @@ Uma vez realizado este processo, siga as instruções de como realizar um [Pull 
 | ẽ     | ѧ         |
 
 
-# OCS Transliterado
+### OCS Transliterado
 
 
 | ASCII | Unicode  |
@@ -157,3 +157,54 @@ Uma vez realizado este processo, siga as instruções de como realizar um [Pull 
 | Z     | ž        |
 | õ     | ǫ        |
 | ẽ     | ę        |
+
+### PIE
+
+
+| ASCII | Unicode  |
+| ----- | -------- |
+| A     | ā        |
+| A/    | ā́        |
+| E     | ē        |
+| E/    | ḗ        |
+| I     | ī        |
+| I/    | ī́        |
+| L     | l̥        |
+| L/    | ĺ̥        |
+| LL    | l̥̄        |
+| LL/   | l̥̄́        |
+| M     | m̥        |
+| N     | n̥        |
+| O     | ō        |
+| O/    | ṓ        |
+| R     | r̥        |
+| R/    | ŕ̥        |
+| RR    | r̥̄        |
+| RR/   | r̥̄́        |
+| U     | ū        |
+| U/    | ū́        |
+| bh    | bʰ       |
+| c     | k̑        |
+| cw    | k̑ʷ       |
+| dh    | dʰ       |
+| gh    | gʰ       |
+| gw    | gʷ       |
+| gwh   | gʷʰ      |
+| h1    | h₁       |
+| h2    | h₂       |
+| h3    | h₃       |
+| j     | ĝ        |
+| jh    | ĝʰ       |
+| jw    | ĝʷ       |
+| k'    | ǵ        |
+| k'    | ḱ        |
+| kw    | kʷ       |
+| lR    | l̥        |
+| lR/   | ĺ̥        |
+| lRR   | l̥̄        |
+| lRR/  | l̥̄́        |
+| u̯'    | w        |
+| w     | u̯        |
+| y     | i̯        |
+| É     | ḗ        |
+| Ó     | ṓ        |
