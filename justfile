@@ -9,3 +9,7 @@ build: clean
 
 clean:
   rm -f *.glstex *.lof *.synctex.gz *.aux *.log *.bbl *.bcf *.blg *n.glg *.out *.run.xml *.toc *.lot *.pdf main.synctex\(busy\)
+
+indent:
+  cd tables && latexindent *.tex -w
+  cd tables && rm *.bak0
