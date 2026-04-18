@@ -418,6 +418,8 @@ end
 
 function ciryl_translit(v)
 	local s = tostring(v)
+	s = string.gsub(s, "ji", "i")
+	s = string.gsub(s, "jI", "i")
 	s = string.gsub(s, "dz'", "ꙁ")
 	s = string.gsub(s, "th", "ѳ")
 	s = string.gsub(s, "dz", "ѕ")
